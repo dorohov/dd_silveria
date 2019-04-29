@@ -1,0 +1,16 @@
+@mixin textGradient() {
+    background: linear-gradient(to right, rgba(76,82,106,1) 0%,rgba(147,117,118,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@mixin heading($align, $mb) {
+    font-family: 'Playfair Display SC';
+    @include textGradient();
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: 0.02em;
+    text-align: $align;
+    margin-bottom: $mb;
+}

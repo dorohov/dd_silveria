@@ -1,0 +1,171 @@
+.__dd {
+    &__blink {
+        color: #000;
+        font-family: 'Playfair Display SC';
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: .02em;
+        position: relative;
+        display: inline-block;
+        padding: 10px 0;
+        span {
+            font-weight: bold;
+        }
+        &::after {
+            content: '';
+            height: 1px;
+            width: 100%;
+            background: #949494;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            top: 100%;
+            transition: .25s all ease;
+        }
+        &:hover {
+            &::after {
+                width: 40%;
+            }
+        }
+    }
+    &__banner {
+        background-image: url(../../img/bg_one.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: right bottom;
+        overflow: hidden;
+        &__inner {
+            min-height: 100vh;
+            width: 100%;
+            @extend %container;
+            display: flex;
+            align-items: center;
+            position: relative;
+            z-index: 10;
+            &::after {
+                content: 'SILVERIA';
+                font-family: 'Playfair Display SC';
+                font-size: 265px;
+                line-height: 307px;
+                letter-spacing: 0.02em;
+                position: absolute;
+                left: 0;
+                bottom: 15%;
+                z-index: -1;
+                color: #fff;
+            }
+        }
+        &__left {
+            max-width: 490px;
+            min-width: 490px;
+            width: 490px;
+            margin-right: 110px;
+        }
+        &__right {
+            max-width: 715px;
+            width: 100%;
+        }
+        &__title {
+            @include heading(left, 40px);
+        }
+        &__desc {
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 28px;
+            margin-bottom: 70px;
+        }
+        &__down {
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            max-width: 75px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            bottom: 25px;
+            cursor: pointer;
+            animation: 5s ease-in-out 0s normal none infinite scroll;
+            &__text {
+                color: #949494;
+                font-family: 'Playfair Display SC';
+                font-size: 18px;
+                line-height: 22px;
+                letter-spacing: 0.02em;
+                margin-bottom: 5px;
+            }
+            &__arrow {
+                text-align: center;
+                svg {
+                    fill: #949494;
+                }
+            }
+        }
+    }
+}
+
+@keyframes scroll {
+    50% {
+        transform: translateY(-15px)
+    }
+}
+
+@media (max-width: 1200px) {
+    .__dd {
+        &__banner {
+            &__left {
+                width: 300px;
+                max-width: 300px;
+                min-width: 300px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1025px) {
+    .__dd {
+        &__banner {
+            &__title {
+                font-size: 24px;
+                line-height: 26px;
+                margin-bottom: 20px;
+            }
+            &__desc {
+                font-size: 16px;
+                line-height: 20px;
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .__dd {
+        &__banner {
+            &__inner {
+                flex-wrap: wrap;
+                padding-top: 30px;
+                padding-bottom: 30px;
+                &::after {
+                    content: none;
+                }
+            }
+            &__left {
+                margin: 0 auto 30px auto;
+                max-width: 40%;
+                min-width: 0;
+                width: 100%;
+            }
+            &__title {
+                font-size: 17px;
+                line-height: 24px;
+            }
+            &__down {
+                display: none;
+            }
+        }
+    }
+}
