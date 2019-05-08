@@ -170,7 +170,7 @@
     }
     &__four {
         @extend %slide;
-        background-image: url(../../img/bg_three.jpg);
+        background-image: url(../../img/bg_four.jpg);
         background-size: cover;
         background-position: center;
         padding-bottom: 0;
@@ -185,7 +185,7 @@
             margin: 0 auto;
         }
         &__ring {
-            max-width: 525px;
+            max-width: 495px;
             width: 100%;
             margin: 0 auto;
         }
@@ -252,7 +252,7 @@
     }
     &__nine {
         @extend %slide;
-        background-image: url(../../img/bg_three.jpg);
+        background-image: url(../../img/bg_nine.jpg);
         background-size: cover;
         background-position: top center;
         &__inner {
