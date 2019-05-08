@@ -1,3 +1,10 @@
+.__anim {
+    opacity: 0;
+    &.is--show {
+        opacity: 1;
+    }
+}
+
 .__dd {
     &__blink {
         color: #000;
@@ -107,7 +114,7 @@
             &__text {
                 color: #949494;
                 font-family: 'Playfair Display SC';
-                font-size: 18px;
+                font-size: 17px;
                 line-height: 22px;
                 letter-spacing: 0.02em;
                 margin-bottom: 5px;
@@ -167,6 +174,7 @@
         background-size: cover;
         background-position: center;
         padding-bottom: 0;
+        overflow: hidden;
         &__inner {
             @extend %container;
         }
@@ -230,12 +238,16 @@
     }
     &__eight {
         @extend %slide;
-        background: #F2F7FD;
+        background: #EDF3F8;
         &__inner {
             @extend %container;
         }
         &__phones {
-
+            padding-top: 20px;
+            video {
+                max-width: 100%;
+                width: 100%;
+            }
         }
     }
     &__nine {
